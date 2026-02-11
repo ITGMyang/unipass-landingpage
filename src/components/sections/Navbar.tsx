@@ -28,7 +28,7 @@ export default function Navbar() {
                             <Bot size={20} />
                         </div>
                         <span className="text-xl font-heading font-extrabold tracking-tight text-gray-900">
-                            UniPass
+                            UniPath
                         </span>
                     </div>
 

@@ -72,7 +72,7 @@ export default function Home() {
                 <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white">
                   <Bot size={20} />
                 </div>
-                <span className="text-xl font-heading font-extrabold text-gray-900">UniPass</span>
+                <span className="text-xl font-heading font-extrabold text-gray-900">UniPath</span>
               </div>
               <p className="text-gray-500 font-medium text-[13px] leading-relaxed">
                 Strategic educational planning powered by data-driven insights and AI.
@@ -132,7 +132,7 @@ export default function Home() {
             className="pt-12 border-t border-border flex flex-col md:row items-center justify-between gap-6"
           >
             <p className="text-gray-400 text-[11px] font-bold uppercase tracking-widest">
-              &copy; {new Date().getFullYear()} UniPass. Established 2024.
+              &copy; {new Date().getFullYear()} UniPath. Established 2024.
             </p>
             <div className="flex gap-8">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Twitter size={18} /></a>

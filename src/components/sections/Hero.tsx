@@ -17,7 +17,7 @@ export default function Hero() {
                 <motion.img
                     style={{ y: y1 }}
                     src="/HeroImage.jpg"
-                    alt="UniPass Hero"
+                    alt="UniPath Hero"
                     className="w-full h-full object-cover opacity-[0.7] contrast-[1.02] scale-110"
                 />
                 {/* Stronger white overlays for text contrast */}
@@ -60,7 +60,7 @@ export default function Hero() {
                             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                             className="text-lg md:text-xl text-gray-800 font-semibold mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed"
                         >
-                            UniPass is an AI-first educational platform that strategically matches students with the world's most prestigious summer schools and academic competitions.
+                            UniPath is an AI-first educational platform that strategically matches students with the world's most prestigious summer schools and academic competitions.
                         </motion.p>
 
                         <motion.div

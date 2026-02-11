@@ -13,7 +13,7 @@ const steps = [
     },
     {
         title: "2. Database Analysis",
-        description: "UniPass scans 10,000+ top-tier opportunities to find programs that maximize your admission chances.",
+        description: "UniPath scans 10,000+ top-tier opportunities to find programs that maximize your admission chances.",
         icon: <Database size={24} />,
         delay: 0.1
     },
@@ -44,7 +44,7 @@ export default function HowItWorks() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-heading font-extrabold text-gray-900 tracking-tight"
                     >
-                        How UniPass <span className="text-gradient">Works.</span>
+                        How UniPath <span className="text-gradient">Works.</span>
                     </motion.h2>
                 </div>
 

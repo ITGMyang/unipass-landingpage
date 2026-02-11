@@ -8,7 +8,7 @@ const testimonials = [
     {
         name: "Sarah Chen",
         role: "Admitted to Stanford",
-        content: "UniPass AI found a specific CS competition I had never heard of. Winning that was the turning point in my application.",
+        content: "UniPath AI found a specific CS competition I had never heard of. Winning that was the turning point in my application.",
         avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
         delay: 0
     },
@@ -22,7 +22,7 @@ const testimonials = [
     {
         name: "Elena Rodriguez",
         role: "Oxford Applicant",
-        content: "Building my academic profile felt overwhelming until I started using UniPass. The AI is like having a private consultant 24/7.",
+        content: "Building my academic profile felt overwhelming until I started using UniPath. The AI is like having a private consultant 24/7.",
         avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150",
         delay: 0.2
     }

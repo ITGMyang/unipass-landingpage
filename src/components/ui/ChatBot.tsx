@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Send, Bot, Sparkles } from 'lucide-react';
 
 const initialMessages = [
-    { id: 1, type: 'bot', content: "Hi! I'm UniPath AI. I can help you find the best summer schools and competitions. Ready to explore?" },
+    { id: 1, type: 'bot', content: "Hi! I'm UniGuide AI. I can help you find the best summer schools and competitions. Ready to explore?" },
 ];
 
 const chatFlow = [
@@ -67,7 +67,7 @@ export default function ChatBot() {
                         <Bot size={22} />
                     </div>
                     <div>
-                        <h3 className="font-heading font-bold text-gray-900 text-sm">UniPath AI</h3>
+                        <h3 className="font-heading font-bold text-gray-900 text-sm">UniGuide AI</h3>
                         <span className="text-[10px] text-accent font-bold uppercase tracking-widest flex items-center gap-1">
                             ● Active
                         </span>

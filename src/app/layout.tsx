@@ -15,8 +15,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "UniPath | AI-Powered Summer School & Competition Guide",
-  description: "Find the perfect summer programs and competitions with UniPath, your AI educational consultant.",
+  title: "UniGuide | AI-Powered Summer School & Competition Guide",
+  description: "Find the perfect summer programs and competitions with UniGuide, your AI educational consultant.",
 };
 
 export default function RootLayout({

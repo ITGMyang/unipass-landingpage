@@ -3,12 +3,11 @@
 import React from 'react';
 import Navbar from '@/components/sections/Navbar';
 import Hero from '@/components/sections/Hero';
+import Challenge from '@/components/sections/Challenge';
 import Features from '@/components/sections/Features';
-import HowItWorks from '@/components/sections/HowItWorks';
-import Testimonials from '@/components/sections/Testimonials';
-import About from '@/components/sections/About';
+import Differentiation from '@/components/sections/Differentiation';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Bot, Mail, Twitter, Linkedin, Github } from 'lucide-react';
+import { Twitter, Facebook, Instagram, Linkedin, ArrowUpRight } from 'lucide-react';
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -19,7 +18,7 @@ export default function Home() {
   });
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <Navbar />
 
       {/* Scroll Progress Bar */}
@@ -29,117 +28,88 @@ export default function Home() {
       />
 
       <Hero />
-      <HowItWorks />
+      <Challenge />
       <Features />
-      <About />
-      <Testimonials />
+      <Differentiation />
 
-      {/* CTA Section */}
-      <section className="py-40 bg-gray-900 text-white relative overflow-hidden">
-        <div className="container mx-auto px-6 text-center relative z-10 max-w-4xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-heading font-extrabold mb-10 tracking-tighter"
-          >
-            Ready to <span className="text-gradient">Evolve</span>?
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-gray-400 font-medium mb-14 leading-relaxed"
-          >
-            Join 10,000+ ambitious students building their legacy today.
-          </motion.p>
-          <button className="bg-white text-gray-900 px-12 py-5 rounded-2xl font-bold text-xl hover:bg-gray-100 transition-colors">
-            Start Free Trial
-          </button>
+      {/* Footer Section */}
+      <footer className="relative pt-40">
+
+        {/* Continuous loop line decoration */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20 -z-0 overflow-hidden">
+          <svg className="w-full h-full" viewBox="0 0 1440 800">
+            <path d="M-100,400 Q200,100 600,600 T1500,300" stroke="var(--primary)" strokeWidth="3" fill="none" />
+          </svg>
         </div>
-      </section>
 
-      {/* Footer */}
-      <footer className="py-32 bg-white border-t border-border">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="col-span-1 md:col-span-1"
-            >
-              <div className="flex items-center gap-2 mb-8">
-                <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white">
-                  <Bot size={20} />
-                </div>
-                <span className="text-xl font-heading font-extrabold text-gray-900">UniPath</span>
-              </div>
-              <p className="text-gray-500 font-medium text-[13px] leading-relaxed">
-                Strategic educational planning powered by data-driven insights and AI.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <h4 className="font-bold text-gray-900 mb-8 uppercase tracking-[0.2em] text-[11px]">Platforms</h4>
-              <ul className="space-y-4 text-[13px] font-bold text-gray-400">
-                <li><a href="#" className="hover:text-primary transition-colors">Summer Schools</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Competitions</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">UniGuide AI</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Roadmap Tool</a></li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <h4 className="font-bold text-gray-900 mb-8 uppercase tracking-[0.2em] text-[11px]">Company</h4>
-              <ul className="space-y-4 text-[13px] font-bold text-gray-400">
-                <li><a href="#" className="hover:text-primary transition-colors">Our Mission</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Success Stories</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Partnerships</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              <h4 className="font-bold text-gray-900 mb-8 uppercase tracking-[0.2em] text-[11px]">Community</h4>
-              <ul className="space-y-4 text-[13px] font-bold text-gray-400">
-                <li><a href="#" className="hover:text-primary transition-colors">Parents Forum</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Knowledge Base</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Support</a></li>
-              </ul>
-            </motion.div>
-          </div>
-
+        <div className="container mx-auto px-6 relative z-10 max-w-7xl">
+          {/* Green CTA Card */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="pt-12 border-t border-border flex flex-col md:row items-center justify-between gap-6"
+            className="bg-primary rounded-[2.5rem] p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12 mb-[-120px] shadow-2xl relative overflow-hidden"
           >
-            <p className="text-gray-400 text-[11px] font-bold uppercase tracking-widest">
-              &copy; {new Date().getFullYear()} UniPath. Established 2024.
-            </p>
-            <div className="flex gap-8">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Twitter size={18} /></a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Linkedin size={18} /></a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Github size={18} /></a>
+            <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12">
+              <svg width="200" height="200" viewBox="0 0 32 32" fill="currentColor">
+                <path d="M8 8V18C8 22.4183 11.5817 26 16 26C20.4183 26 24 22.4183 24 18V8" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
+                <path d="M22 6L26 2L30 6" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </div>
+
+            <div className="text-dark max-w-xl text-center md:text-left">
+              <h3 className="text-4xl md:text-6xl font-heading font-extrabold tracking-tighter mb-6">Start your journey.</h3>
+              <p className="text-xl font-bold opacity-80">Join the UniGuide beta community.</p>
+            </div>
+
+            <button className="bg-dark text-white px-10 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform">
+              Sign Up for Early Access
+              <ArrowUpRight size={20} className="text-primary" />
+            </button>
           </motion.div>
+        </div>
+
+        {/* Black Footer Base */}
+        <div className="bg-dark pt-52 pb-16">
+          <div className="container mx-auto px-6 max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center border-b border-white/5 pb-12 mb-12">
+              <div className="flex flex-col gap-2 scale-90 origin-left">
+                <svg width="40" height="40" viewBox="0 0 32 32" fill="none" className="text-white mb-2">
+                  <path d="M8 8V18C8 22.4183 11.5817 26 16 26C20.4183 26 24 22.4183 24 18V8" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
+                  <path d="M22 6L26 2L30 6" stroke="var(--primary)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M26 2L26 12" stroke="var(--primary)" strokeWidth="3.5" strokeLinecap="round" />
+                </svg>
+                <p className="text-white/40 text-[13px] font-bold uppercase tracking-widest">
+                  Strategic educational planning powered by AI.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center gap-4">
+                <h4 className="text-white/20 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Contact Us</h4>
+                <a href="mailto:hello@uniguide.ai" className="text-white text-xl font-heading font-bold hover:text-primary transition-colors">
+                  hello@uniguide.ai
+                </a>
+                <p className="text-white/40 text-[14px] font-medium">Global Headquarters • Remote First</p>
+              </div>
+
+              <div className="flex justify-end gap-8">
+                <a href="#" className="text-white/60 hover:text-primary transition-colors"><Twitter size={20} /></a>
+                <a href="#" className="text-white/60 hover:text-primary transition-colors"><Facebook size={20} /></a>
+                <a href="#" className="text-white/60 hover:text-primary transition-colors"><Instagram size={20} /></a>
+                <a href="#" className="text-white/60 hover:text-primary transition-colors"><Linkedin size={20} /></a>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <p className="text-white/20 text-[11px] font-bold uppercase tracking-widest">
+                Copyright © UniGuide – All Rights Reserved
+              </p>
+              <div className="flex gap-8 text-[11px] font-bold uppercase tracking-widest text-white/20">
+                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </main>

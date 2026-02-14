@@ -56,7 +56,7 @@ export default function About() {
                             transition={{ delay: 0.1 }}
                             className="text-lg text-gray-500 font-medium leading-relaxed mb-10"
                         >
-                            At UniPath, we believe that access to high-prestige summer schools and competitions shouldn't be limited by who you know. We've built an AI that brings transparency to the background enhancement process.
+                            At UniGuide, we believe that access to high-prestige summer schools and competitions shouldn't be limited by who you know. We've built an AI that brings transparency to the background enhancement process.
                         </motion.p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

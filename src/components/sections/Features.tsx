@@ -1,95 +1,113 @@
-"use client";
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Trophy, Database, Zap } from 'lucide-react';
-
-// Minimalist Icons
-const graduationCap = <GraduationCap size={32} strokeWidth={1.5} />;
-const trophy = <Trophy size={32} strokeWidth={1.5} />;
-const database = <Database size={32} strokeWidth={1.5} />;
-const zap = <Zap size={32} strokeWidth={1.5} />;
 
 const features = [
     {
-        title: "Program Intelligence",
-        description: "Our AI maps your academic profile to elite summer programs at Harvard, Stanford, and Oxford.",
-        icon: graduationCap,
-        delay: 0
+        type: 'image',
+        src: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800',
+        alt: 'Students studying'
     },
     {
-        title: "Competition Strategy",
-        description: "Identify high-prestige competitions that align with your major and career aspirations.",
-        icon: trophy,
-        delay: 0.1
+        type: 'text',
+        title: 'Plan early by getting clear direction on academics and extracurriculars that support future applications.',
+        category: 'Plan',
+        bgColor: 'var(--card-yellow)'
     },
     {
-        title: "Deep Database",
-        description: "Access a proprietary database of 10,000+ audited academic opportunities worldwide.",
-        icon: database,
-        delay: 0.2
+        type: 'image',
+        src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800',
+        alt: 'Student interaction'
     },
     {
-        title: "Instant Guidance",
-        description: "Real-time answers to application queries and strategic background elevation advice.",
-        icon: zap,
-        delay: 0.3
+        type: 'text',
+        title: 'Organize key documents and achievements all stored in one central place.',
+        category: 'Organize',
+        bgColor: 'var(--card-green)'
+    },
+    {
+        type: 'text',
+        title: 'Tailor applications to each university’s requirements, programs, and expectations.',
+        category: 'Tailor',
+        bgColor: 'var(--card-purple)'
+    },
+    {
+        type: 'image',
+        src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800',
+        alt: 'Collaboration'
+    },
+    {
+        type: 'text',
+        title: 'Track progress alongside parents and counsellors to stay aligned and confident at every step.',
+        category: 'Track',
+        bgColor: 'var(--card-orange)'
+    },
+    {
+        type: 'image',
+        src: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800',
+        alt: 'Student working'
     }
 ];
 
 export default function Features() {
     return (
         <section id="features" className="py-32 bg-white">
-            <div className="container mx-auto px-6 max-w-6xl">
-                <div className="flex flex-col lg:flex-row items-end justify-between gap-10 mb-24">
-                    <div className="max-w-xl">
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
-                            className="text-primary font-bold tracking-[0.2em] uppercase text-[11px] mb-6 block"
-                        >
-                            Intelligence Platform
-                        </motion.p>
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-5xl font-heading font-extrabold text-gray-900 tracking-tight"
-                        >
-                            Strategize Your <br />
-                            <span className="text-gradient">Academic Future.</span>
-                        </motion.h2>
-                    </div>
+            <div className="container mx-auto px-6 max-w-7xl">
+
+                {/* Section Header */}
+                <div className="text-center mb-24">
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        className="lg:max-w-xs"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        className="inline-block px-6 py-2 rounded-full border border-dark/5 mb-8"
                     >
-                        <p className="text-gray-500 font-medium leading-relaxed">
-                            We leverage large-scale data to provide students with a competitive edge in elite university admissions.
-                        </p>
+                        <span className="text-dark font-bold text-lg underline-bespoke">Meet</span>
                     </motion.div>
+
+                    <div className="flex items-center justify-center gap-4 mb-10">
+                        <svg width="40" height="40" viewBox="0 0 32 32" fill="none" className="text-dark">
+                            <path d="M8 8V18C8 22.4183 11.5817 26 16 26C20.4183 26 24 22.4183 24 18V8" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
+                            <path d="M22 6L26 2L30 6" stroke="var(--primary)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M26 2L26 12" stroke="var(--primary)" strokeWidth="3.5" strokeLinecap="round" />
+                        </svg>
+                        <h2 className="text-5xl md:text-7xl font-heading font-extrabold text-dark tracking-tighter">
+                            UniGuide
+                        </h2>
+                    </div>
+
+                    <p className="max-w-3xl mx-auto text-lg text-dark/70 font-medium leading-relaxed">
+                        UniGuide AI is a platform that helps students plan early, stay organized, and make confident decisions with the support of intelligent guidance.
+                    </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
-                    {features.map((feature, idx) => (
+                {/* Bento Grid Features */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[300px]">
+                    {features.map((item, idx) => (
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: feature.delay }}
-                            className="group p-10 hover:bg-muted transition-colors duration-500 rounded-3xl cursor-default"
+                            transition={{ delay: idx * 0.05 }}
+                            className={`rounded-[2rem] overflow-hidden ${item.type === 'text' ? 'p-10 flex flex-col justify-center' : ''
+                                }`}
+                            style={item.type === 'text' ? { backgroundColor: item.bgColor } : {}}
                         >
-                            <div className="mb-8 text-primary group-hover:scale-110 transition-transform duration-500 origin-left">
-                                {feature.icon}
-                            </div>
-                            <h3 className="text-[17px] font-heading font-bold text-gray-900 mb-4">{feature.title}</h3>
-                            <p className="text-[14px] text-gray-500 font-medium leading-[1.6]">
-                                {feature.description}
-                            </p>
+                            {item.type === 'image' ? (
+                                <img
+                                    src={item.src}
+                                    alt={item.alt}
+                                    className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                                />
+                            ) : (
+                                <>
+                                    <h4 className="text-xl font-heading font-bold text-dark mb-4">
+                                        <span className="font-extrabold">{item.category}</span> early by getting
+                                    </h4>
+                                    <p className="text-dark/80 font-medium leading-relaxed">
+                                        {item.title?.replace((item.category || '') + ' early by getting ', '')}
+                                    </p>
+                                </>
+                            )}
                         </motion.div>
                     ))}
                 </div>

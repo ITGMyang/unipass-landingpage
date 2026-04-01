@@ -1,11 +1,14 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import Navbar from '@/components/sections/Navbar';
 import Hero from '@/components/sections/Hero';
 import Challenge from '@/components/sections/Challenge';
 import Features from '@/components/sections/Features';
-import Differentiation from '@/components/sections/Differentiation';
+import Testimonials from '@/components/sections/Testimonials';
+import Pricing from '@/components/sections/Pricing';
+import Contact from '@/components/sections/Contact';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Twitter, Facebook, Instagram, Linkedin, ArrowUpRight } from 'lucide-react';
 
@@ -28,9 +31,13 @@ export default function Home() {
       />
 
       <Hero />
-      <Challenge />
+      <div id="why">
+        <Challenge />
+      </div>
       <Features />
-      <Differentiation />
+      <Testimonials />
+      <Pricing />
+      <Contact />
 
       {/* Footer Section */}
       <footer className="relative pt-40">
@@ -62,10 +69,10 @@ export default function Home() {
               <p className="text-xl font-bold opacity-80">Join the UniGuide beta community.</p>
             </div>
 
-            <button className="bg-dark text-white px-10 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform">
+            <Link href="https://app.uniguide-ai.ca" className="bg-dark text-white px-10 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform no-underline">
               Sign Up for Early Access
               <ArrowUpRight size={20} className="text-primary" />
-            </button>
+            </Link>
           </motion.div>
         </div>
 
@@ -74,11 +81,9 @@ export default function Home() {
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center border-b border-white/5 pb-12 mb-12">
               <div className="flex flex-col gap-2 scale-90 origin-left">
-                <svg width="40" height="40" viewBox="0 0 32 32" fill="none" className="text-white mb-2">
-                  <path d="M8 8V18C8 22.4183 11.5817 26 16 26C20.4183 26 24 22.4183 24 18V8" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
-                  <path d="M22 6L26 2L30 6" stroke="var(--primary)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M26 2L26 12" stroke="var(--primary)" strokeWidth="3.5" strokeLinecap="round" />
-                </svg>
+                <div className="bg-white p-2 rounded-xl h-12 w-fit flex items-center justify-center">
+                  <img src="/Logo.jpg" alt="UniGuide Logo" className="h-full w-auto" />
+                </div>
                 <p className="text-white/40 text-[13px] font-bold uppercase tracking-widest">
                   Strategic educational planning powered by AI.
                 </p>
@@ -105,8 +110,8 @@ export default function Home() {
                 Copyright © UniGuide – All Rights Reserved
               </p>
               <div className="flex gap-8 text-[11px] font-bold uppercase tracking-widest text-white/20">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
               </div>
             </div>
           </div>

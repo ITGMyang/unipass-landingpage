@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function Hero() {
@@ -27,8 +28,8 @@ export default function Hero() {
                             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                             className="text-5xl md:text-[88px] font-heading font-extrabold text-dark leading-[1.05] tracking-tighter mb-10"
                         >
-                            A <span className="underline-bespoke">Smarter</span> Path <br />
-                            to University.
+                            AI-Driven <br />
+                            <span className="underline-bespoke">School</span> Selection.
                         </motion.h1>
 
                         <motion.p
@@ -37,7 +38,7 @@ export default function Hero() {
                             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                             className="text-lg md:text-xl text-dark/70 font-medium mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed"
                         >
-                            Supporting students with clear, data-driven guidance to build competitive applications.
+                            Experience the future of university applications. Get a personalized school list based on 10,000+ successful admissions in seconds.
                         </motion.p>
 
                         <motion.div
@@ -46,13 +47,13 @@ export default function Hero() {
                             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                         >
-                            <button className="modern-button !py-4 !px-10 gap-2 group">
-                                Join the Beta
-                                <span className="bg-primary text-dark text-[10px] font-bold px-1.5 py-0.5 rounded-full">1</span>
-                            </button>
-                            <button className="modern-button-primary !py-4 !px-10 font-bold rounded-xl hover:shadow-lg transition-all">
-                                Explore the Platform
-                            </button>
+                            <Link href="https://app.uniguide-ai.ca" className="modern-button !py-4 !px-10 gap-2 group">
+                                Start Your Selection
+                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                            <Link href="/#how" className="modern-button-primary !py-4 !px-10 font-bold rounded-xl hover:shadow-lg transition-all">
+                                How it Works
+                            </Link>
                         </motion.div>
                     </div>
 

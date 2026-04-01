@@ -1,87 +1,80 @@
-"use client";
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Quote } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 
 const testimonials = [
     {
         name: "Sarah Chen",
-        role: "Admitted to Stanford",
-        content: "UniGuide AI found a specific CS competition I had never heard of. Winning that was the turning point in my application.",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
-        delay: 0
+        role: "Stanford Admit '27",
+        text: "UniGuide's AI selection tool was spot on. It identified two schools I hadn't even considered that ended up being my top matches.",
+        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200",
+        rating: 5
     },
     {
-        name: "James Wilson",
-        role: "Harvard '28",
-        content: "The Summer School recommendations were spot on. It saved me weeks of research and helped me focus on programs that actually mattered.",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
-        delay: 0.1
+        name: "Marcus Thompson",
+        role: "UofT Engineering Student",
+        text: "The data-driven approach gave me the confidence to apply to reach schools. The personalized roadmap was a game changer.",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+        rating: 5
     },
     {
         name: "Elena Rodriguez",
-        role: "Oxford Applicant",
-        content: "Building my academic profile felt overwhelming until I started using UniGuide. The AI is like having a private consultant 24/7.",
-        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150",
-        delay: 0.2
+        role: "Parent of Grade 12 Student",
+        text: "As a parent, the clarity UniGuide provided reduced our family stress exponentially. We knew exactly where we stood.",
+        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
+        rating: 5
     }
 ];
 
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="py-32 bg-gray-50/50">
-            <div className="container mx-auto px-6 max-w-6xl">
-                <div className="text-center max-w-2xl mx-auto mb-20">
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        className="text-primary font-bold tracking-[0.2em] uppercase text-[11px] mb-6 block"
+        <section id="testimonials" className="py-32 bg-dark overflow-hidden">
+            <div className="container mx-auto px-6 max-w-7xl">
+                <div className="text-center mb-24">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        className="inline-block px-6 py-2 rounded-full border border-white/10 mb-8"
                     >
-                        Success Stories
-                    </motion.p>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-heading font-extrabold text-gray-900 tracking-tight"
-                    >
-                        Hear from Our <span className="text-gradient">Global Scholars.</span>
-                    </motion.h2>
+                        <span className="text-primary font-bold text-lg uppercase tracking-widest">Success Stories</span>
+                    </motion.div>
+
+                    <h2 className="text-5xl md:text-7xl font-heading font-extrabold text-white mb-10 tracking-tighter">
+                        Loved by <span className="text-primary italic">Ambitious</span> Students.
+                    </h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {testimonials.map((item, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: item.delay }}
-                            className="modern-card p-10 flex flex-col items-start relative group"
+                            transition={{ delay: idx * 0.1 }}
+                            className="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] relative group hover:bg-white/10 transition-all duration-500"
                         >
-                            <Quote className="absolute top-8 right-8 text-primary/10 group-hover:text-primary/20 transition-colors" size={40} />
+                            <Quote size={40} className="text-primary/20 absolute top-8 right-8" />
 
                             <div className="flex gap-1 mb-6">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star key={i} size={14} className="fill-primary text-primary" />
+                                {[...Array(item.rating)].map((_, i) => (
+                                    <Star key={i} size={16} fill="var(--primary)" className="text-primary" />
                                 ))}
                             </div>
 
-                            <p className="text-gray-600 font-medium leading-relaxed mb-8 flex-1 italic">
-                                "{item.content}"
+                            <p className="text-white/80 text-lg font-medium leading-relaxed mb-10 italic">
+                                "{item.text}"
                             </p>
 
-                            <div className="flex items-center gap-4 mt-auto">
+                            <div className="flex items-center gap-4">
                                 <img
-                                    src={item.avatar}
+                                    src={item.image}
                                     alt={item.name}
-                                    className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm"
+                                    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
                                 />
                                 <div>
-                                    <h4 className="font-heading font-bold text-gray-900 text-[15px]">{item.name}</h4>
-                                    <p className="text-gray-400 font-bold text-[11px] uppercase tracking-wider">{item.role}</p>
+                                    <h4 className="text-white font-bold text-lg">{item.name}</h4>
+                                    <p className="text-white/40 text-sm font-bold uppercase tracking-wider">{item.role}</p>
                                 </div>
                             </div>
                         </motion.div>

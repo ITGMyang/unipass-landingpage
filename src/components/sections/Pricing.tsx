@@ -7,8 +7,8 @@ const plans = [
     {
         name: 'Basic',
         positioning: 'Self-service queries',
-        priceMonthly: '$14.99',
-        priceYearly: '$119/yr (~$9.9/mo)',
+        priceMonthly: '$9.9',
+        priceYearly: '',
         highlighted: false,
         features: [
             { title: 'Modules', desc: 'Summer & competition database' },

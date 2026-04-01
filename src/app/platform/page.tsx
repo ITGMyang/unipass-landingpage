@@ -299,7 +299,7 @@ export default function PlatformPage() {
             {/* Footer (Simplified from Home) */}
             <footer className="bg-dark pt-32 pb-16">
                 <div className="container mx-auto px-6 max-w-7xl">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center border-b border-white/5 pb-12 mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-b border-white/5 pb-12 mb-12">
                         <div className="flex flex-col gap-2 scale-90 origin-left">
                             <div className="bg-white p-2 rounded-xl h-12 w-fit flex items-center justify-center">
                                 <img src="/Logo.jpg" alt="UniGuide Logo" className="h-full w-auto" />
@@ -307,13 +307,6 @@ export default function PlatformPage() {
                             <p className="text-white/40 text-[13px] font-bold uppercase tracking-widest">
                                 Strategic educational planning powered by AI.
                             </p>
-                        </div>
-
-                        <div className="flex flex-col items-center gap-4">
-                            <h4 className="text-white/20 text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Contact Us</h4>
-                            <a href="mailto:hello@uniguide.ai" className="text-white text-xl font-heading font-bold hover:text-primary transition-colors">
-                                hello@uniguide.ai
-                            </a>
                         </div>
 
                         <div className="flex justify-end gap-8">

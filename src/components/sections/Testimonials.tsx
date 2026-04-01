@@ -40,7 +40,7 @@ export default function Testimonials() {
                     </motion.div>
 
                     <h2 className="text-5xl md:text-7xl font-heading font-extrabold text-white mb-10 tracking-tighter">
-                        Loved by <span className="text-primary italic">Ambitious</span> Students.
+                        Loved by <span className="text-primary italic">Students</span> and Parents.
                     </h2>
                 </div>
 

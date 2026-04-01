@@ -23,27 +23,30 @@ export default function Challenge() {
                         >
                             Why <span className="text-primary tracking-tighter">UniGuide</span>?
                         </motion.h2>
-                        <motion.p
+                        <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-lg text-white/60 font-medium leading-relaxed"
+                            className="space-y-6"
                         >
-                            Traditional school selection is often based on guesswork or outdated rankings.
-                            UniGuide uses advanced AI to analyze your profile against 10,000+ successful
-                            admission cases, providing accuracy that human consultants can't match.
-                        </motion.p>
+                            <h3 className="text-2xl font-bold text-white leading-tight underline-bespoke">AI-Powered Profile Optimization</h3>
+                            <p className="text-lg text-white/60 font-medium leading-relaxed">
+                                Receive personalized recommendations based on real admissions trends. 
+                                UniGuide helps identify missing experiences, strengths to highlight, 
+                                and opportunities to enhance competitiveness.
+                            </p>
+                        </motion.div>
                     </div>
 
                     <div className="flex-1 lg:pl-12">
-                        <h3 className="text-xl font-bold mb-8 text-white/90">Our AI Advantage:</h3>
+                        <h3 className="text-xl font-bold mb-8 text-primary uppercase tracking-widest text-sm">Key Features:</h3>
                         <ul className="space-y-6">
                             {[
-                                "90.2% Admission Accuracy",
-                                "Personalized Match Score",
-                                "Gap Analysis & Competitive Edge",
-                                "Instant Reach/Match/Safety List"
+                                "Built on 10,000+ successful admissions profiles",
+                                "Targeted leadership & volunteering strategies",
+                                "Gap analysis to boost your competitive edge",
+                                "Custom course & competition recommendations"
                             ].map((advantage, idx) => (
                                 <motion.li
                                     key={idx}
@@ -51,9 +54,9 @@ export default function Challenge() {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2 + (idx * 0.1) }}
-                                    className="flex items-center gap-4 text-white/80 font-bold"
+                                    className="flex items-center gap-4 text-white/90 font-bold"
                                 >
-                                    <div className="w-2 h-2 rounded-full bg-primary" />
+                                    <div className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)]" />
                                     {advantage}
                                 </motion.li>
                             ))}

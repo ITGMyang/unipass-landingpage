@@ -19,7 +19,6 @@ export default function Navbar() {
 
     const navLinks = [
         { name: 'Why UniGuide', href: '/#why' },
-        { name: 'How it works', href: '/#how' },
         { name: 'Pricing', href: '/#pricing' },
         { name: 'Testimonials', href: '/#testimonials' },
         { name: 'Contact', href: '/#contact' }
@@ -44,21 +43,21 @@ export default function Navbar() {
                     {/* Desktop Nav */}
                     <div className="hidden lg:flex items-center gap-10">
                         {navLinks.map((item) => (
-                            <Link
+                            <a
                                 key={item.name}
                                 href={item.href}
                                 className="text-[15px] font-bold text-dark/70 hover:text-dark transition-colors tracking-tight"
                             >
                                 {item.name}
-                            </Link>
+                            </a>
                         ))}
                     </div>
 
                     {/* CTA */}
                     <div className="hidden md:flex items-center">
-                        <Link href="https://app.uniguide-ai.ca" className="modern-button !rounded-full !py-2.5 !px-8 hover:!bg-primary hover:!text-dark transition-all duration-300 no-underline">
+                        <a href="#pricing" className="modern-button !rounded-full !py-2.5 !px-8 hover:!bg-primary hover:!text-dark transition-all duration-300 no-underline">
                             Get Started
-                        </Link>
+                        </a>
                     </div>
 
                     {/* Mobile Toggle */}
@@ -81,18 +80,18 @@ export default function Navbar() {
                         className="lg:hidden fixed inset-x-6 top-24 z-50 modern-card p-8 space-y-6 shadow-2xl"
                     >
                         {navLinks.map((item) => (
-                            <Link
+                            <a
                                 key={item.name}
                                 href={item.href}
                                 className="block text-lg font-bold text-dark border-b border-border pb-4"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {item.name}
-                            </Link>
+                            </a>
                         ))}
-                        <Link href="https://app.uniguide-ai.ca" className="w-full modern-button-primary py-4 rounded-2xl font-bold flex items-center justify-center gap-2 no-underline">
+                        <a href="#pricing" className="w-full modern-button-primary py-4 rounded-2xl font-bold flex items-center justify-center gap-2 no-underline">
                             Get Started <ArrowUpRight size={18} />
-                        </Link>
+                        </a>
                     </motion.div>
                 )}
             </AnimatePresence>

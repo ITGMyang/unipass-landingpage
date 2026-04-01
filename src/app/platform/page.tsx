@@ -317,8 +317,8 @@ export default function PlatformPage() {
                         </div>
 
                         <div className="flex justify-end gap-8">
-                            <Link href="https://app.uniguide-ai.ca" className="modern-button-primary px-8 py-3 rounded-xl font-bold no-underline">
-                                Join Waitlist
+                            <Link href="/#pricing" className="modern-button-primary px-8 py-3 rounded-xl font-bold no-underline">
+                                Get Started
                             </Link>
                         </div>
                     </div>

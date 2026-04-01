@@ -5,10 +5,10 @@ import Link from 'next/link';
 import Navbar from '@/components/sections/Navbar';
 import Hero from '@/components/sections/Hero';
 import Challenge from '@/components/sections/Challenge';
-import Features from '@/components/sections/Features';
 import Testimonials from '@/components/sections/Testimonials';
 import Pricing from '@/components/sections/Pricing';
 import Contact from '@/components/sections/Contact';
+import PromoPopup from '@/components/sections/PromoPopup';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Twitter, Facebook, Instagram, Linkedin, ArrowUpRight } from 'lucide-react';
 
@@ -22,6 +22,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
+      <PromoPopup />
       <Navbar />
 
       {/* Scroll Progress Bar */}
@@ -34,7 +35,6 @@ export default function Home() {
       <div id="why">
         <Challenge />
       </div>
-      <Features />
       <Testimonials />
       <Pricing />
       <Contact />
@@ -69,10 +69,10 @@ export default function Home() {
               <p className="text-xl font-bold opacity-80">Join the UniGuide beta community.</p>
             </div>
 
-            <Link href="https://app.uniguide-ai.ca" className="bg-dark text-white px-10 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform no-underline">
+            <a href="#pricing" className="bg-dark text-white px-10 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform no-underline">
               Sign Up for Early Access
               <ArrowUpRight size={20} className="text-primary" />
-            </Link>
+            </a>
           </motion.div>
         </div>
 

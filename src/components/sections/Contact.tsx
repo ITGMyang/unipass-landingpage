@@ -20,34 +20,12 @@ export default function Contact() {
                             >
                                 <span className="text-dark font-bold text-lg underline-bespoke uppercase tracking-widest">Get in touch</span>
                             </motion.div>
-                            <h2 className="text-5xl md:text-7xl font-heading font-extrabold text-dark tracking-tighter mb-8 italic">
-                                Ready to <span className="text-primary not-italic">Start?</span>
+                            <h2 className="text-5xl md:text-7xl font-heading font-extrabold text-dark tracking-tighter mb-8">
+                                Any questions about <span className="text-primary">Uniguide?</span>
                             </h2>
                             <p className="text-xl text-dark/70 font-medium leading-relaxed max-w-md">
                                 Have questions about our AI or curious how we can help your specific journey? Drop us a line.
                             </p>
-                        </div>
-
-                        <div className="space-y-8">
-                            <div className="flex items-center gap-6 group">
-                                <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center group-hover:bg-primary transition-colors duration-500">
-                                    <Mail className="text-dark" size={24} />
-                                </div>
-                                <div>
-                                    <p className="text-dark/40 text-xs font-bold uppercase tracking-widest mb-1">Email us</p>
-                                    <h4 className="text-xl font-bold text-dark">hello@uniguide.ai</h4>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center gap-6 group">
-                                <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center group-hover:bg-primary transition-colors duration-500">
-                                    <MessageSquare className="text-dark" size={24} />
-                                </div>
-                                <div>
-                                    <p className="text-dark/40 text-xs font-bold uppercase tracking-widest mb-1">Chat</p>
-                                    <h4 className="text-xl font-bold text-dark">Messenger / Discord</h4>
-                                </div>
-                            </div>
                         </div>
                     </div>
 

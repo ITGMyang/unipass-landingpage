@@ -330,8 +330,8 @@ export default function ImpactPage() {
                             <h3 className="text-4xl md:text-5xl font-heading font-extrabold tracking-tighter">Ready to start planning?</h3>
                             <p className="text-xl font-bold opacity-70">Join the UniGuide community today.</p>
                         </div>
-                        <Link href="https://app.uniguide-ai.ca" className="bg-dark text-white px-10 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform whitespace-nowrap no-underline">
-                            Get Early Access
+                        <Link href="/#pricing" className="bg-dark text-white px-10 py-5 rounded-2xl font-bold text-lg flex items-center gap-3 hover:scale-105 transition-transform whitespace-nowrap no-underline">
+                            Sign Up for Early Access
                             <ArrowUpRight size={20} className="text-primary" />
                         </Link>
                     </motion.div>
@@ -359,8 +359,8 @@ export default function ImpactPage() {
                         </div>
 
                         <div className="flex justify-end gap-8">
-                            <Link href="https://app.uniguide-ai.ca" className="modern-button-primary px-8 py-3 rounded-xl font-bold flex items-center gap-2 no-underline">
-                                Join Beta <ArrowUpRight size={18} />
+                            <Link href="/#pricing" className="modern-button-primary px-8 py-3 rounded-xl font-bold flex items-center gap-2 no-underline">
+                                Get Started <ArrowUpRight size={18} />
                             </Link>
                         </div>
                     </div>
